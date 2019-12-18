@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				DE49D4D823A302AC00110301 /* LaunchScreen.storyboard */,
+				DEE65E6823A7CB1200BBD0D8 /* SinglePageViewController.swift */,
 				DE49D4D023A302AB00110301 /* Main.storyboard */,
 				DEA3E0B923A7E399005641FC /* StatViewController.swift */,
 			);
@@ -101,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				DEE65E6423A7C74300BBD0D8 /* CustomPageViewController.swift */,
-				DEE65E6823A7CB1200BBD0D8 /* SinglePageViewController.swift */,
 				DEE65E6623A7C88C00BBD0D8 /* DataViewController.swift */,
 			);
 			path = Controllers;
