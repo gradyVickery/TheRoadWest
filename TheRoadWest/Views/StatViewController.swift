@@ -18,6 +18,7 @@ class StatViewController: UIViewController {
         testLabel.text = String(donuts)
         
         super.viewDidLoad()
+        print("testing if git registers change")
         
     }
 }
