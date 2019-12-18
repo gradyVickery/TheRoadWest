@@ -17,6 +17,8 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePageViewController()
+        
+        
     }
     
     //MARK:- Navigation
