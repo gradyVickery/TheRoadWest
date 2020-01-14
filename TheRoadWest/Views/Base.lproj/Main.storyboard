@@ -61,10 +61,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="X3I-EY-R4S" firstAttribute="leading" secondItem="blR-kC-VkD" secondAttribute="leading" constant="20" id="7iY-zg-dHc"/>
-                            <constraint firstItem="X3I-EY-R4S" firstAttribute="centerX" secondItem="YBD-aq-Rhy" secondAttribute="centerX" id="Rhg-6l-j6M"/>
-                            <constraint firstItem="X3I-EY-R4S" firstAttribute="centerY" secondItem="YBD-aq-Rhy" secondAttribute="centerY" id="ZFf-uk-DW7"/>
-                            <constraint firstItem="blR-kC-VkD" firstAttribute="trailing" secondItem="X3I-EY-R4S" secondAttribute="trailing" constant="20" id="uZL-1b-yBT"/>
+                            <constraint firstItem="X3I-EY-R4S" firstAttribute="centerY" secondItem="YBD-aq-Rhy" secondAttribute="centerY" id="Hz4-kv-4NH"/>
+                            <constraint firstItem="X3I-EY-R4S" firstAttribute="leading" secondItem="YBD-aq-Rhy" secondAttribute="leadingMargin" id="P7e-WR-XMv"/>
+                            <constraint firstItem="X3I-EY-R4S" firstAttribute="trailing" secondItem="YBD-aq-Rhy" secondAttribute="trailingMargin" id="naT-v3-AEU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="blR-kC-VkD"/>
                     </view>
@@ -88,13 +87,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agedPage" translatesAutoresizingMaskIntoConstraints="NO" id="SO1-aM-ntC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(Game text goes here)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-4V-arK">
-                                <rect key="frame" x="20" y="94" width="374" height="246"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="246" id="sdL-Ok-oa9"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" indicatorStyle="black" editable="NO" text="(Game text goes here)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-4V-arK">
+                                <rect key="frame" x="20" y="94" width="374" height="522"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-EY-OKV">
@@ -102,18 +98,18 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GOp-pZ-bek">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Button1">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NX7-4T-91r"/>
+                                            <action selector="button1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5e-jH-cEi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-fS-9HG">
                                         <rect key="frame" x="0.0" y="44" width="374" height="36"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="3Rw-i9-o8a"/>
                                         </constraints>
@@ -122,29 +118,29 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q8m-ji-1VA"/>
+                                            <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xo-d5-3Jo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-jw-osb">
                                         <rect key="frame" x="0.0" y="88" width="374" height="36"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Button3">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqr-2T-AMs"/>
+                                            <action selector="button3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69l-uE-F6v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WOS-Bl-1DA">
                                         <rect key="frame" x="0.0" y="132" width="374" height="36"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Button4">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Biv-Qt-JHV"/>
+                                            <action selector="button4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7k-Nz-KaH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -161,6 +157,7 @@
                             <constraint firstAttribute="bottom" secondItem="SO1-aM-ntC" secondAttribute="bottom" id="qtq-2h-3eu"/>
                             <constraint firstItem="dg5-4V-arK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tvN-8R-kdh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SSO-EY-OKV" secondAttribute="bottom" constant="70" id="tw6-st-nyy"/>
+                            <constraint firstItem="SSO-EY-OKV" firstAttribute="top" secondItem="dg5-4V-arK" secondAttribute="bottom" constant="8" id="v2D-or-jq5"/>
                             <constraint firstItem="SO1-aM-ntC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yNe-Aw-pwD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -187,32 +184,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5V-b9-MTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2179.7101449275365" y="170.75892857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OfL-FY-FAY">
-            <objects>
-                <viewController id="d8S-FU-rgb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CbM-RG-yIp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OcS-n0-wGb">
-                                <rect key="frame" x="0.0" y="53" width="414" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="uOE-9O-0X0"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GcT-DO-n56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2937.68115942029" y="183.48214285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QDe-Bh-1E2">

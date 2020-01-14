@@ -83,8 +83,8 @@ class DataViewController: UIViewController {
         answerButton3.layer.borderWidth = 1
         answerButton4.layer.borderWidth = 1
         
-        answerButton1.layer.borderColor = UIColor.black.cgColor
-        answerButton2.layer.borderColor = UIColor.black.cgColor
+        answerButton1.layer.borderColor = UIColor.gray.cgColor
+        answerButton2.layer.borderColor = UIColor.gray.cgColor
         answerButton3.layer.borderColor = UIColor.black.cgColor
         answerButton4.layer.borderColor = UIColor.black.cgColor
     }

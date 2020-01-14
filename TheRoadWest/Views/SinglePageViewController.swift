@@ -18,6 +18,9 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
         super.viewDidLoad()
         configurePageViewController()
         
+        title = "Chapter 1"
+        
+        
         
     }
     

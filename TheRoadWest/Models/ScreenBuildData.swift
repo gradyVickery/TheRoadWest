@@ -27,7 +27,21 @@ let screenItems = [
         button4: Button(buttonText: "Just sit here and wait", gameStateNumber: 5)),
     // 2
     ScreenBuild(
-    textView: "I made it to the market just in time to buy some peas.",
+        textView: """
+    I made it to the market just in time to buy some peas. I made it to the market just in time to buy some peas. I made it to the market just in time to buy some peas. I made it to the market just in time to buy some peas. I made it to the market just in time to buy some peas. I made it to the market just in time to buy some peas.
+        
+    I made it to the market just in time to buy some peas.
+I made it to the market just in time to buy some peas.
+I made it to the market just in time to buy some peas.
+I made it to the market just in time to buy some peas.
+I made it to the market just in time to buy some peas.
+I made it to the market just in time to buy some peas.
+I made it to the market just in time to buy some peas.
+
+    What do you want to do with peas?
+
+
+""",
     button1: Button(buttonText: "Eat peas", gameStateNumber: 6),
     button2: Button(buttonText: "Save peas for later", gameStateNumber: 7),
     button3: Button(buttonText: "Throw peas in the trash", gameStateNumber: 8),
