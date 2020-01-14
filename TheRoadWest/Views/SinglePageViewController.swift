@@ -11,7 +11,7 @@ import UIKit
 class SinglePageViewController: UIViewController, DataViewControllerDelegate {
     
     var currentViewControllerIndex = 0
-    var donutsBox = 599
+    var donutsBox = 599 // for testing a stats view page
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowStats" {
             let controller = segue.destination as! StatViewController
-            controller.donuts = donutsBox
+            controller.donuts = donutsBox // testing assigning stats to new stat page
         }
     }
     
@@ -54,8 +54,7 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
     
     // Method to handle button clicks and page turn animation
     func setViewControllerFromIndex(index: Int) {
-        
-        print("called setView")
+ 
         let oldIndex = currentViewControllerIndex
         print(currentViewControllerIndex)
         currentViewControllerIndex = index
@@ -93,7 +92,7 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
                 animated: true,
                 completion: nil)
         }
-        print("end page setView")
+        
     }
 
     

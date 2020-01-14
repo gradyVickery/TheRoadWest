@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ooy-lg-XLo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ooy-lg-XLo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,13 +85,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agedPage" translatesAutoresizingMaskIntoConstraints="NO" id="SO1-aM-ntC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="(Game text goes here)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-4V-arK">
                                 <rect key="frame" x="20" y="94" width="374" height="246"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="246" id="sdL-Ok-oa9"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -148,15 +150,18 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SSO-EY-OKV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ain-7F-OSG"/>
                             <constraint firstItem="dg5-4V-arK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Exp-ru-9oQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SSO-EY-OKV" secondAttribute="trailing" constant="20" id="HHm-cl-9oZ"/>
                             <constraint firstItem="SSO-EY-OKV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hq8-VO-Gtd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg5-4V-arK" secondAttribute="trailing" constant="20" id="Upu-Ob-6qA"/>
+                            <constraint firstItem="SO1-aM-ntC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kjV-ZC-7Ph"/>
+                            <constraint firstItem="SO1-aM-ntC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oTo-cf-YN2"/>
+                            <constraint firstAttribute="bottom" secondItem="SO1-aM-ntC" secondAttribute="bottom" id="qtq-2h-3eu"/>
                             <constraint firstItem="dg5-4V-arK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tvN-8R-kdh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SSO-EY-OKV" secondAttribute="bottom" constant="70" id="tw6-st-nyy"/>
+                            <constraint firstItem="SO1-aM-ntC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yNe-Aw-pwD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -183,6 +188,32 @@
             </objects>
             <point key="canvasLocation" x="2179.7101449275365" y="170.75892857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="OfL-FY-FAY">
+            <objects>
+                <viewController id="d8S-FU-rgb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CbM-RG-yIp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OcS-n0-wGb">
+                                <rect key="frame" x="0.0" y="53" width="414" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uOE-9O-0X0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcT-DO-n56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937.68115942029" y="183.48214285714286"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="QDe-Bh-1E2">
             <objects>
@@ -202,4 +233,7 @@
             <point key="canvasLocation" x="-714" y="171"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="agedPage" width="1000" height="1000"/>
+    </resources>
 </document>

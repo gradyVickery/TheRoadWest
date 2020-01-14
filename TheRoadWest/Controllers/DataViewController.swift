@@ -65,9 +65,9 @@ class DataViewController: UIViewController {
     }
     func callNextScreen(stateNum: Int) {
           
-          index = stateNum
+        index = stateNum
         gameTextView.text = screenItems[index].textView
-          configButtons(index)
+        configButtons(index)
         
     }
    
