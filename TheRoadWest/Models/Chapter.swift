@@ -8,14 +8,8 @@
 
 import Foundation
 
-class Chapter {
+public struct Chapter {
     var title: String
     var textItems: [ScreenBuild]
-
-    
-    init(title: String, textItems: [ScreenBuild]) {
-        self.title = title
-        self.textItems = textItems
-    }
-    
+     
 }

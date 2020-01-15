@@ -14,13 +14,12 @@
 		DE49D4D723A302AC00110301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE49D4D623A302AC00110301 /* Assets.xcassets */; };
 		DE49D4DA23A302AC00110301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE49D4D823A302AC00110301 /* LaunchScreen.storyboard */; };
 		DEA3E0BA23A7E399005641FC /* StatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3E0B923A7E399005641FC /* StatViewController.swift */; };
-		DEB6DE6023CE8C4900A5EAF3 /* Chapter2data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB6DE5F23CE8C4900A5EAF3 /* Chapter2data.swift */; };
 		DED6750A23A43E4800F56E27 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6750923A43E4800F56E27 /* Button.swift */; };
 		DEE65E6523A7C74300BBD0D8 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE65E6423A7C74300BBD0D8 /* CustomPageViewController.swift */; };
 		DEE65E6723A7C88C00BBD0D8 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE65E6623A7C88C00BBD0D8 /* DataViewController.swift */; };
 		DEE65E6923A7CB1200BBD0D8 /* SinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE65E6823A7CB1200BBD0D8 /* SinglePageViewController.swift */; };
 		DEF50E8523CE6DC90017E8D5 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF50E8423CE6DC90017E8D5 /* Chapter.swift */; };
-		DEF50E8723CE6E7F0017E8D5 /* Chapter1data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF50E8623CE6E7F0017E8D5 /* Chapter1data.swift */; };
+		DEF50E8723CE6E7F0017E8D5 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF50E8623CE6E7F0017E8D5 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +32,12 @@
 		DE49D4D923A302AC00110301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE49D4DB23A302AC00110301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA3E0B923A7E399005641FC /* StatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatViewController.swift; sourceTree = "<group>"; };
-		DEB6DE5F23CE8C4900A5EAF3 /* Chapter2data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2data.swift; sourceTree = "<group>"; };
 		DED6750923A43E4800F56E27 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DEE65E6423A7C74300BBD0D8 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		DEE65E6623A7C88C00BBD0D8 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		DEE65E6823A7CB1200BBD0D8 /* SinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePageViewController.swift; sourceTree = "<group>"; };
 		DEF50E8423CE6DC90017E8D5 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
-		DEF50E8623CE6E7F0017E8D5 /* Chapter1data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1data.swift; sourceTree = "<group>"; };
+		DEF50E8623CE6E7F0017E8D5 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +123,7 @@
 				DED6750923A43E4800F56E27 /* Button.swift */,
 				DE13BC6023A42A57004384CA /* ScreenBuild.swift */,
 				DEF50E8423CE6DC90017E8D5 /* Chapter.swift */,
-				DEF50E8623CE6E7F0017E8D5 /* Chapter1data.swift */,
-				DEB6DE5F23CE8C4900A5EAF3 /* Chapter2data.swift */,
+				DEF50E8623CE6E7F0017E8D5 /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,12 +202,11 @@
 				DED6750A23A43E4800F56E27 /* Button.swift in Sources */,
 				DEF50E8523CE6DC90017E8D5 /* Chapter.swift in Sources */,
 				DEA3E0BA23A7E399005641FC /* StatViewController.swift in Sources */,
-				DEF50E8723CE6E7F0017E8D5 /* Chapter1data.swift in Sources */,
+				DEF50E8723CE6E7F0017E8D5 /* Book.swift in Sources */,
 				DE49D4CB23A302AB00110301 /* AppDelegate.swift in Sources */,
 				DE13BC6123A42A57004384CA /* ScreenBuild.swift in Sources */,
 				DEE65E6523A7C74300BBD0D8 /* CustomPageViewController.swift in Sources */,
 				DEE65E6923A7CB1200BBD0D8 /* SinglePageViewController.swift in Sources */,
-				DEB6DE6023CE8C4900A5EAF3 /* Chapter2data.swift in Sources */,
 				DE49D4CD23A302AB00110301 /* SceneDelegate.swift in Sources */,
 				DEE65E6723A7C88C00BBD0D8 /* DataViewController.swift in Sources */,
 			);

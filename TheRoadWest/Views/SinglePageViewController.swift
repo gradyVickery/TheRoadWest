@@ -11,16 +11,20 @@ import UIKit
 class SinglePageViewController: UIViewController, DataViewControllerDelegate {
  
     var currentViewControllerIndex = 0
-    
+    var bookIndex = 0
     // for testing a stats view page
     var food = 0
-
+    
+    var chapter: Chapter?
+    
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        chapter = book[bookIndex]
         configurePageViewController()
-  
+        title = chapter?.title
+        
     }
     
     //MARK:- Navigation
@@ -47,7 +51,9 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
             else {
                 return
             }
-            
+        
+       
+        
         pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
     }
     
@@ -57,19 +63,22 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
     func addFood() {
         food += 1
     }
-    
-    func setTitle(_ chapter: Chapter) {
-        title = chapter.title
+    func nextChapter() {
+        bookIndex += 1
+        if bookIndex >= book.count {
+           bookIndex = 0
+        }
+        chapter = book[bookIndex]
+        title = chapter?.title
     }
     
-    // Method to handle button clicks and page turn animation
+    
+    // Method to page turn animation via user choices(buttons)
     func setViewControllerFromIndex(index: Int) {
         
         let oldIndex = currentViewControllerIndex
-        print(currentViewControllerIndex)
         currentViewControllerIndex = index
-        print(currentViewControllerIndex)
-                
+       
         guard let pageViewController = storyboard?.instantiateViewController(identifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController
             else {
                 return
@@ -87,7 +96,7 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
             else {
                 return
         }
-                      
+    
         pageViewController.setViewControllers(
             [startingViewController],
             direction: .forward,
@@ -112,6 +121,7 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
                 return nil
         }
         dataViewController.index = index
+        dataViewController.chapter = chapter
         dataViewController.delegate = self
      
         return dataViewController

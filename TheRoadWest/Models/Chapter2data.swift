@@ -23,7 +23,7 @@ let chapter2 =
         textView: "2Entered yes, and ready to start the game",
         buttons: [
         Button(buttonText: "Let's move on", gameStateNumber: 2, actionGroup: "gainFood"),
-        Button(buttonText: "Where's Waldo?", gameStateNumber: 0),
+        Button(buttonText: "2Where's Waldo?", gameStateNumber: 0),
         Button(buttonText: "Go to end", gameStateNumber: 0),
         Button(buttonText: "Just sit here and wait", gameStateNumber: 0)]),
         // 2

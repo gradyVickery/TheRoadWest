@@ -10,12 +10,11 @@ import UIKit
 
 protocol DataViewControllerDelegate {
     func setViewControllerFromIndex(index: Int)
-    func setTitle(_ chapter: Chapter)
+    func nextChapter()
     func addFood()
 }
 
 class DataViewController: UIViewController, UIScrollViewDelegate {
-
 
     var chapter: Chapter?
     var textItems: [ScreenBuild]!
@@ -25,11 +24,9 @@ class DataViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var gameTextView: UITextView!
     @IBOutlet var answerButtons: [UIButton]!
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        chapter = chapter1
-        self.delegate?.setTitle(chapter!)
         textItems = chapter?.textItems
     
         buttonSetup()
@@ -41,11 +38,10 @@ class DataViewController: UIViewController, UIScrollViewDelegate {
         let btn = sender as UIButton
         let btnIndex = answerButtons.firstIndex(of: btn)
         let btnGroup = textItems[index].buttons[btnIndex!]
+        
         // action item testing Button[1]
-        if btnGroup.actionGroup != "" {
-            let action = btnGroup.actionGroup
-            calculateStatChange(action!)
-            print(btnGroup.actionGroup!)
+        if let action = btnGroup.actionGroup {
+            calculateStatChange(action)
         }
         
         index = textItems[index].buttons[btnIndex!].gameStateNumber
@@ -85,6 +81,10 @@ class DataViewController: UIViewController, UIScrollViewDelegate {
         case "gainFood":
             self.delegate?.addFood()
             print("You added 1 food!")
+        case "nextChapter":
+            print("called next chapter from datavc")
+            self.delegate?.nextChapter()
+            
         default:
             print("Fell through to default")
         }
