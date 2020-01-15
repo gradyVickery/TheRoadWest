@@ -10,15 +10,12 @@ import UIKit
 
 class StatViewController: UIViewController {
     
-    var donuts = 0
+    var food = 0
     
     @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
-        testLabel.text = String(donuts)
-        
+        testLabel.text = String(food)
         super.viewDidLoad()
-        print("testing if git registers change")
-        
     }
 }

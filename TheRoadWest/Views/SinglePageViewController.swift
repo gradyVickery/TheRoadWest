@@ -11,53 +11,60 @@ import UIKit
 class SinglePageViewController: UIViewController, DataViewControllerDelegate {
  
     var currentViewControllerIndex = 0
-    var donutsBox = 599 // for testing a stats view page
-    var currentChapter: Chapter?
+    
+    // for testing a stats view page
+    var food = 0
 
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePageViewController()
-        
- 
-        
+  
     }
     
     //MARK:- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowStats" {
             let controller = segue.destination as! StatViewController
-            controller.donuts = donutsBox // testing assigning stats to new stat page
+            controller.food = food // testing assigning stats to new stat page
         }
     }
     
     // Initial page view
     func configurePageViewController() {
-            
-            guard let pageViewController = storyboard?.instantiateViewController(identifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController
-                else {
-                    return
-            }
-            
-            pageViewController.delegate = self
-            addChild(pageViewController)
-            pageViewController.didMove(toParent: self)
-            pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
-            
-            contentView.addSubview(pageViewController.view)
-            
-            guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex)
-                else {
-                    return
-            }
-            
-            pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+        guard let pageViewController = storyboard?.instantiateViewController(identifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController
+        else {
+            return
         }
+        pageViewController.delegate = self
+        addChild(pageViewController)
+        pageViewController.didMove(toParent: self)
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(pageViewController.view)
+            
+        guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex)
+            else {
+                return
+            }
+            
+        pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+    }
+    
+    // MARK:- DataViewController Delegate methods
+    
+    // testing stat gathering
+    func addFood() {
+        food += 1
+    }
+    
+    func setTitle(_ chapter: Chapter) {
+        title = chapter.title
+    }
     
     // Method to handle button clicks and page turn animation
     func setViewControllerFromIndex(index: Int) {
- 
+        
         let oldIndex = currentViewControllerIndex
         print(currentViewControllerIndex)
         currentViewControllerIndex = index
@@ -98,11 +105,7 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
         
     }
 
-    // DataViewController Delegate methods
-    func setTitle(_ chapter: Chapter) {
-        title = chapter.title
-        currentChapter = chapter
-    }
+    
     func detailViewControllerAt(index: Int) -> DataViewController? {
         guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DataViewController.self)) as? DataViewController
             else {

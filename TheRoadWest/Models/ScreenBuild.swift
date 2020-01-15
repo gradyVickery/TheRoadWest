@@ -12,8 +12,6 @@ public struct ScreenBuild {
     
     public let textView: String
     public let buttons: [Button]
-//    public let button2: Button
-//    public let button3: Button
-//    public let button4: Button
+
 
 }

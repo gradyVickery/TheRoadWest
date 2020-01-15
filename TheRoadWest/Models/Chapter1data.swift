@@ -14,7 +14,7 @@ let chapter1 =
     ScreenBuild(
         textView: "Welcome to the game! I will be your host. Please pay attention to the details you recieve here. \n\nDo you want to play?",
         buttons: [
-            Button(buttonText: "Yes", gameStateNumber: 1, actionGroup: "gainFood"),
+            Button(buttonText: "Yes", gameStateNumber: 0, actionGroup: "gainFood"),
             Button(buttonText: "No", gameStateNumber: 0),
             Button(buttonText: "", gameStateNumber: 0),
             Button(buttonText: "", gameStateNumber: 0) ]),
@@ -62,6 +62,6 @@ let chapter1 =
             Button(buttonText: "Back to start", gameStateNumber: 0),
             Button(buttonText: "", gameStateNumber: 2),
             Button(buttonText: "", gameStateNumber: 1),
-            Button(buttonText: "", gameStateNumber: 0)])
+            Button(buttonText: "", gameStateNumber: 0)]),
         ])
       

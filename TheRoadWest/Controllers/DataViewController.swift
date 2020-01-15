@@ -11,9 +11,10 @@ import UIKit
 protocol DataViewControllerDelegate {
     func setViewControllerFromIndex(index: Int)
     func setTitle(_ chapter: Chapter)
+    func addFood()
 }
 
-class DataViewController: UIViewController {
+class DataViewController: UIViewController, UIScrollViewDelegate {
 
 
     var chapter: Chapter?
@@ -33,14 +34,20 @@ class DataViewController: UIViewController {
     
         buttonSetup()
         configScreen(stateNum: index)
-
     }
 
     // Button actions -- SinglePageViewController is delegate
-    @IBAction func answerButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
+    @IBAction func answerButtonClicked(_ sender: UIButton) {
+        let btn = sender as UIButton
         let btnIndex = answerButtons.firstIndex(of: btn)
-       
+        let btnGroup = textItems[index].buttons[btnIndex!]
+        // action item testing Button[1]
+        if btnGroup.actionGroup != "" {
+            let action = btnGroup.actionGroup
+            calculateStatChange(action!)
+            print(btnGroup.actionGroup!)
+        }
+        
         index = textItems[index].buttons[btnIndex!].gameStateNumber
         self.delegate?.setViewControllerFromIndex(index: index)
     }
@@ -53,9 +60,9 @@ class DataViewController: UIViewController {
     
     func buttonSetup() {
         for button in answerButtons {
-            button.layer.cornerRadius = 5
-            button.layer.borderWidth = 1
-            button.layer.borderColor = UIColor.gray.cgColor
+            button.layer.cornerRadius = 6
+            button.layer.borderWidth = 3
+            button.layer.borderColor = UIColor.darkGray.cgColor
         }
     }
     
@@ -69,6 +76,17 @@ class DataViewController: UIViewController {
                 button.setTitle(textItems[index].buttons[count].buttonText, for: .normal)
             }
             count += 1
+        }
+    }
+    
+    // Possible stat gathering
+    func calculateStatChange(_ action: String) {
+        switch action {
+        case "gainFood":
+            self.delegate?.addFood()
+            print("You added 1 food!")
+        default:
+            print("Fell through to default")
         }
     }
 }

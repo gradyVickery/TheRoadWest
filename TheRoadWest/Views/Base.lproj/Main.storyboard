@@ -87,7 +87,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agedPage" translatesAutoresizingMaskIntoConstraints="NO" id="SO1-aM-ntC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" indicatorStyle="black" editable="NO" text="(Game text goes here)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-4V-arK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" indicatorStyle="black" editable="NO" text="(Game text goes here)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-4V-arK">
                                 <rect key="frame" x="20" y="94" width="374" height="522"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
