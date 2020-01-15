@@ -1,5 +1,5 @@
 //
-//  DataViewController.swift
+//  ContentViewController.swift
 //  TheRoadWest
 //
 //  Created by Grady Vickery on 12/16/19.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol DataViewControllerDelegate {
+protocol ContentViewControllerDelegate {
     func setViewControllerFromIndex(index: Int)
     func nextChapter()
     func addFood()
 }
 
-class DataViewController: UIViewController, UIScrollViewDelegate {
+class ContentViewController: UIViewController, UIScrollViewDelegate {
 
     var chapter: Chapter?
     var textItems: [ScreenBuild]!
-    var delegate: DataViewControllerDelegate?
+    var delegate: ContentViewControllerDelegate?
     var index = 0
    
     @IBOutlet weak var gameTextView: UITextView!

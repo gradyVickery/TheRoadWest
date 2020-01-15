@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SinglePageViewController: UIViewController, DataViewControllerDelegate {
+class SinglePageViewController: UIViewController, ContentViewControllerDelegate {
  
     var currentViewControllerIndex = 0
     var bookIndex = 0
@@ -115,8 +115,8 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
     }
 
     
-    func detailViewControllerAt(index: Int) -> DataViewController? {
-        guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DataViewController.self)) as? DataViewController
+    func detailViewControllerAt(index: Int) -> ContentViewController? {
+        guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentViewController.self)) as? ContentViewController
             else {
                 return nil
         }
