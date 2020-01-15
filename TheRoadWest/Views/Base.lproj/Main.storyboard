@@ -104,7 +104,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5e-jH-cEi"/>
+                                            <action selector="answerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JA2-Qk-iq0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-fS-9HG">
@@ -118,7 +118,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xo-d5-3Jo"/>
+                                            <action selector="answerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B6b-UO-edR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-jw-osb">
@@ -129,7 +129,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69l-uE-F6v"/>
+                                            <action selector="answerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0SA-Np-Tis"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WOS-Bl-1DA">
@@ -140,7 +140,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="button4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7k-Nz-KaH"/>
+                                            <action selector="answerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSJ-vl-hyz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -166,11 +166,11 @@
                         <barButtonItem key="rightBarButtonItem" title="Stats" id="m4f-Ar-5jL"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="answerButton1" destination="GOp-pZ-bek" id="dsk-ik-LCg"/>
-                        <outlet property="answerButton2" destination="vdd-fS-9HG" id="bfw-KB-iIf"/>
-                        <outlet property="answerButton3" destination="9fb-jw-osb" id="GHL-cc-Ynp"/>
-                        <outlet property="answerButton4" destination="WOS-Bl-1DA" id="FOc-9p-Ahi"/>
                         <outlet property="gameTextView" destination="dg5-4V-arK" id="uPw-0L-HuG"/>
+                        <outletCollection property="answerButtons" destination="GOp-pZ-bek" collectionClass="NSMutableArray" id="EFh-sS-JQN"/>
+                        <outletCollection property="answerButtons" destination="vdd-fS-9HG" collectionClass="NSMutableArray" id="jcw-Zb-SsC"/>
+                        <outletCollection property="answerButtons" destination="9fb-jw-osb" collectionClass="NSMutableArray" id="G51-ng-L5h"/>
+                        <outletCollection property="answerButtons" destination="WOS-Bl-1DA" collectionClass="NSMutableArray" id="ebO-7R-XJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

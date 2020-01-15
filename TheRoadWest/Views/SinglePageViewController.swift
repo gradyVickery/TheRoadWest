@@ -9,18 +9,18 @@
 import UIKit
 
 class SinglePageViewController: UIViewController, DataViewControllerDelegate {
-    
+ 
     var currentViewControllerIndex = 0
     var donutsBox = 599 // for testing a stats view page
+    var currentChapter: Chapter?
+
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configurePageViewController()
         
-        title = "Chapter 1"
-        
-        
+ 
         
     }
     
@@ -98,12 +98,12 @@ class SinglePageViewController: UIViewController, DataViewControllerDelegate {
         
     }
 
-    
+    // DataViewController Delegate methods
+    func setTitle(_ chapter: Chapter) {
+        title = chapter.title
+        currentChapter = chapter
+    }
     func detailViewControllerAt(index: Int) -> DataViewController? {
-        if index >= screenItems.count || screenItems.count == 0 {
-            return nil
-        }
-        
         guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DataViewController.self)) as? DataViewController
             else {
                 return nil
@@ -122,10 +122,6 @@ extension SinglePageViewController: UIPageViewControllerDelegate, UIPageViewCont
         return currentViewControllerIndex
     }
 
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return screenItems.count
-    }
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         return nil
@@ -135,5 +131,8 @@ extension SinglePageViewController: UIPageViewControllerDelegate, UIPageViewCont
 
         return nil
     }
+//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//        return (currentChapter?.textItems.count)!
+//    }
     
 }
